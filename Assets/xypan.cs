@@ -19,7 +19,8 @@ public class xypan : MonoBehaviour
     {
         Vector2 t = Camera.main.ScreenToViewportPoint(image.transform.localPosition) * 15;
         Target.transform.position = new Vector3(t.x, Target.transform.position.y, t.y);
-        Target.transform.position = new Vector3(Target.transform.position.x,h.value, Target.transform.position.z);
+        //fix vertical invert
+        Target.transform.position = new Vector3(Target.transform.position.x,-h.value, Target.transform.position.z);
 
 
     }
